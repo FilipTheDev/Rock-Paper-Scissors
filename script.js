@@ -11,8 +11,7 @@ function computerPlay() {
     }
 }
 
-function gameRound(playerSelection, computerSelection) {
-    //player input with prompt
+function gameRound(playerSelection, computerSelection) {    
     let playerInput = prompt("Do you choose rock, paper or scissors?");
     playerSelection = playerInput.toLowerCase();
     computerSelection = computerPlay();
@@ -63,18 +62,18 @@ function game() {
     let playerPoints = 0;
     let compPoints = 0;
     for (let i = 0; i < 5; i++) {
-        gameRound();
+        let roundWin = gameRound();
         //If the function has the value of 2 it means the round was a tie
-        if(gameRound == 2) {
+        if(roundWin == 2) {
             console.log("Player: " + playerPoints + " Computer: " + compPoints);
         }
         //If the function has the value of 0 it means in the round player won
-        if(gameRound == 0) {
+        if(roundWin == 0) {
             playerPoints++;
             console.log("Player: " + playerPoints + " Computer: " + compPoints);
         }
         //If the function has the value of 1 it means in the round computer won
-        if(gameRound == 1) {
+        if(roundWin == 1) {
             compPoints++;
             console.log("Player: " + playerPoints + " Computer: " + compPoints);
         }
