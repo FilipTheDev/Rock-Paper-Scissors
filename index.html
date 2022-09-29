@@ -8,14 +8,16 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
-    <button name="rock" class="selBut" onclick="gameRound('rock');" value="rock">Rock</button>
-    <button name="paper" class="selBut" onclick="gameRound('paper');" value="paper">Paper</button>
-    <button name="scissors" class="selBut" onclick="gameRound('scissors');" value="scissors">Scissors</button>
-    <div id="displayRes">
-        <!-- <h2></h2> -->
+    <div id="buttons">
+        <button onclick="gameRound('rock');" id="rock" name="rock" class="selBut">Rock</button>
+        <button onclick="gameRound('paper');" id="paper" name="paper" class="selBut">Paper</button>
+        <button onclick="gameRound('scissors');" id="scissors" name="scissors" class="selBut">Scissors</button>
     </div>
-
+    <div id="displayRes">
+        
+    </div>
+    <h2 id="h2"></h2>
+    <h3 id="h3"></h3>
     <script src="script.js"></script>
 </body>
 </html>
