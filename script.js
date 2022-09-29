@@ -10,47 +10,48 @@ function computerPlay() {
         return "scissors";
     }
 }
+var selBut = document.getElementsByClassName("selBut");
+var displayResDiv = document.querySelector("#displayRes");
 
 function gameRound(playerSelection, computerSelection) {    
-    let playerInput = prompt("Do you choose rock, paper or scissors?");
-    playerSelection = playerInput.toLowerCase();
+    // let playerInput = prompt("Do you choose rock, paper or scissors?");
     computerSelection = computerPlay();
     if(playerSelection == computerSelection) {
         if(playerSelection == "rock") {
-            console.log("It's a tie, you both chose rock");
+            displayResDiv.textContent = "It's a tie, you both chose rock";
             return 2
         }
         if(playerSelection == "paper") {
-            console.log("It's a tie, you both chose paper");
+            displayResDiv.textContent = "It's a tie, you both chose paper";
             return 2
         }
         if(playerSelection == "scissors") {
-            console.log("It's a tie, you both chose scissors");
+            displayResDiv.textContent = "It's a tie, you both chose scissors";
             return 2
         }
     }
     if(playerSelection == "rock" && computerSelection == "paper") {
-        console.log("Computer won, paper beats rock");
+        displayResDiv.textContent = "Computer won, paper beats rock";
         return 1;
     }
     if(playerSelection == "rock" && computerSelection == "scissors") {
-        console.log("Player won, rock beats scissors");
+        displayResDiv.textContent = "Player won, rock beats scissors";
         return 0;
     }
     if(playerSelection == "paper" && computerSelection == "rock") {
-        console.log("Player won, paper beats rock");
+        displayResDiv.textContent = "Player won, paper beats rock";
         return 0;
     }
     if(playerSelection == "paper" && computerSelection == "scissors") {
-        console.log("Computer won, scissors beats paper");
+        displayResDiv.textContent = "Computer won, scissors beats paper";
         return 1;
     }
     if(playerSelection == "scissors" && computerSelection == "rock") {
-        console.log("Computer won, rock beats scissors");
+        displayResDiv.textContent = "Computer won, rock beats scissors";
         return 1;
     }
     if(playerSelection == "scissors" && computerSelection == "paper") {
-        console.log("Player won, scissors beats paper");
+        displayResDiv.textContent = "Player won, scissors beats paper";
         return 0;
     }
     else {
